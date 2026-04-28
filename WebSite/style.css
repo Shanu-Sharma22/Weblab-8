@@ -1,0 +1,227 @@
+/* ===========================
+   Global Styles
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #fafafa;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #2e7d32;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #ffb300;
+}
+.toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero {
+  background: url('team.png') no-repeat center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-content {
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  background: #ffb300;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #e68900;
+}
+.btn.secondary {
+  background: #fff;
+  color: #2e7d32;
+}
+.btn.secondary:hover {
+  background: #ddd;
+}
+
+/* ===========================
+   Carousel
+=========================== */
+.carousel {
+  position: relative;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+.slide {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ===========================
+   Modal
+=========================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  width: 50%;
+  border-radius: 8px;
+  text-align: center;
+}
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ===========================
+   Cards & Sections
+=========================== */
+section {
+  padding: 2rem;
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===========================
+   Filters
+=========================== */
+.filters {
+  margin: 1rem 0;
+}
+.filters .btn {
+  margin: 0.3rem;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===========================
+   Animations
+=========================== */
+.animate { animation: fadeIn 2s ease-in; }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+section { opacity:0; transform:translateY(50px); transition:all 1s ease; }
+section.visible { opacity:1; transform:translateY(0); }
+
+/* ===========================
+   Responsive
+=========================== */
+@media(max-width:768px){
+  .nav-links{display:none; flex-direction:column; background:#2e7d32; padding:1rem;}
+  .nav-links.active{display:flex;}
+  .toggle-btn{display:block;}
+  .hero h1{font-size:2rem;}
+}

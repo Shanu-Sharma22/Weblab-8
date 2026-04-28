@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLeaf Café</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">GreenLeaf Café</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="toggle-btn">☰</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content animate">
+      <h1>Fresh. Sustainable. Local.</h1>
+      <p>Experience eco-friendly coffee culture at GreenLeaf Café.</p>
+      <a href="menu.html" class="btn">Explore Our Menu</a>
+      <button id="newsletterBtn" class="btn secondary">Join Newsletter</button>
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <section class="carousel">
+    <h2>Featured Drinks</h2>
+    <div class="slider">
+      <div class="slide"><img src="latte.jpg.png" alt="Latte"></div>
+      <div class="slide"><img src="espresso.png" alt="Espresso"></div>
+      <div class="slide"><img src="mocha.png" alt="Mocha"></div>
+    </div>
+    <button class="prev">⟨</button>
+    <button class="next">⟩</button>
+  </section>
+
+  <!-- Modal -->
+  <div id="newsletterModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Subscribe to Our Newsletter</h2>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 GreenLeaf Café | Designed with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

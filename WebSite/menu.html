@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - GreenLeaf Café</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">GreenLeaf Café</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="toggle-btn">☰</button>
+  </nav>
+
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="filters">
+      <button data-filter="all" class="btn">All</button>
+      <button data-filter="coffee" class="btn">Coffee</button>
+      <button data-filter="bakery" class="btn">Bakery</button>
+      <button data-filter="seasonal" class="btn">Seasonal</button>
+    </div>
+    <div class="cards">
+      <div class="card coffee"><h3>Espresso</h3><p>₹150</p></div>
+      <div class="card coffee"><h3>Cappuccino</h3><p>₹200</p></div>
+      <div class="card bakery"><h3>Croissant</h3><p>₹120</p></div>
+      <div class="card bakery"><h3>Muffin</h3><p>₹100</p></div>
+      <div class="card seasonal"><h3>Pumpkin Spice Latte</h3><p>₹250</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 GreenLeaf Café</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
